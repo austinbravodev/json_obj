@@ -1,4 +1,4 @@
-json_dict = {
+json = {
     "attr": "attr value",
     "nested": {"attr": "nested attr value"},
     "list_attr": [1, 2, 3],

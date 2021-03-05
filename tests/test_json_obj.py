@@ -1,17 +1,17 @@
 import pytest
 
-from .mock import json_dict
+from .mocks import json
 
 from json_obj import JSONObj
 
 
 def test_json_obj():
-    json_obj = JSONObj(json_dict)
+    json_obj = JSONObj(json)
 
     assert json_obj.attr == "attr value"
     assert json_obj.nested.attr == "nested attr value"
     assert json_obj.list_attr[2] == 3
-    assert json_obj.nested_list.list[2] == 3
+    assert json_obj.nested_list.list_attr[2] == 3
     assert json_obj.nested_attr_list[0].attr == "in list"
 
     json_obj.missing = "present"
